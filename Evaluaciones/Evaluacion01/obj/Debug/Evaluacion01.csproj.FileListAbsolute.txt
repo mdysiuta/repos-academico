@@ -1,0 +1,8 @@
+C:\Users\laboratorio\source\repos\repos-academico\Evaluaciones\Evaluacion01\bin\Debug\Evaluacion01.exe.config
+C:\Users\laboratorio\source\repos\repos-academico\Evaluaciones\Evaluacion01\bin\Debug\Evaluacion01.exe
+C:\Users\laboratorio\source\repos\repos-academico\Evaluaciones\Evaluacion01\bin\Debug\Evaluacion01.pdb
+C:\Users\laboratorio\source\repos\repos-academico\Evaluaciones\Evaluacion01\obj\Debug\Evaluacion01.csproj.AssemblyReference.cache
+C:\Users\laboratorio\source\repos\repos-academico\Evaluaciones\Evaluacion01\obj\Debug\Evaluacion01.csproj.SuggestedBindingRedirects.cache
+C:\Users\laboratorio\source\repos\repos-academico\Evaluaciones\Evaluacion01\obj\Debug\Evaluacion01.csproj.CoreCompileInputs.cache
+C:\Users\laboratorio\source\repos\repos-academico\Evaluaciones\Evaluacion01\obj\Debug\Evaluacion01.exe
+C:\Users\laboratorio\source\repos\repos-academico\Evaluaciones\Evaluacion01\obj\Debug\Evaluacion01.pdb

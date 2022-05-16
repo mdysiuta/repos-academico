@@ -16,7 +16,7 @@ namespace Evaluacion01
         private int pesoActual;
         public Buque buque;
 
-        public string Codigo { get => codigo; set => codigo = value; }
+        public string Codigo { get => codigo; }
         public string Marca { get => marca; set => marca = value; }
         public int CapacidadMaxima { get => capacidadMaxima; set => capacidadMaxima = value; }
         public byte Tamaño { get => tamaño; set => tamaño = value; }
@@ -24,6 +24,27 @@ namespace Evaluacion01
         public int PesoActual { get => pesoActual; set => pesoActual = value; }
 
         public Container() { }
+
+        public Container(string codigo, int capacidadMaxima = 0, int pesoActual = 0, byte tamaño = 20, string marca = "Sin especificar", bool esRefrigerado = false)
+        {
+            if (codigo.Length < 5)
+            {
+                for (int i = 0; i < (5 - codigo.Length); i++)
+                {
+                    // Se concatena el codigo hasta que contenga 5 carácteres
+                    codigo = string.Concat("0", codigo);
+                }
+            }
+            this.codigo = codigo;
+            this.capacidadMaxima = capacidadMaxima;
+            this.pesoActual = pesoActual;
+
+            // Si la condición no se cumple, el container será creado con el valor 20 por defecto
+            if (tamaño >= 30) tamaño = 40;
+
+            this.marca = marca;
+            this.esRefrigerado = esRefrigerado;
+        }
 
         /// <summary>
         /// Remueve aproximadamente un 10% del peso cargado en el container.
