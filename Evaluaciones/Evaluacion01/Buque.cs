@@ -14,7 +14,7 @@ namespace Evaluacion01
         private int cantidadContainers;
         private int cantidadContainersCargados;
         private int gastoTransporte;
-        private List<Container> listaContainers;
+        private List<Container> listaContainers = new List<Container>();
 
         public string Codigo { get => codigo; }
         public string Nombre { get => nombre; set => nombre = value; }
