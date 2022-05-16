@@ -35,7 +35,7 @@ namespace Evaluacion01
 
         public Buque() { }
 
-        public Buque(string codigo, int cantidadContainers = 20, int cantidadContainersCargados = 0, int gastoTransporte = 0, string nombre = "Sin especificar", string pais = "Sin especificar")
+        public Buque(string codigo, int gastoTransporte = 0, int cantidadContainers = 20, int cantidadContainersCargados = 0, string nombre = "Sin especificar", string pais = "Sin especificar")
         {
             if (codigo.Length < 5)
             {
@@ -45,10 +45,10 @@ namespace Evaluacion01
                     codigo = string.Concat("0", codigo);
                 }
             }
+            this.gastoTransporte = gastoTransporte;
             this.codigo = codigo;
             this.cantidadContainers = cantidadContainers;
             this.cantidadContainersCargados = cantidadContainersCargados;
-            this.gastoTransporte = gastoTransporte;
             this.nombre = nombre;
             this.pais = pais;
         }
@@ -70,7 +70,13 @@ namespace Evaluacion01
             }
 
             listaContainers.Add(container);
-            if (container.Tamaño == 40) listaContainers.Add(container);
+            cantidadContainersCargados++;
+
+            if (container.Tamaño == 40)
+            {
+                listaContainers.Add(container);
+                cantidadContainersCargados++;
+            }
 
             return true;
         }
