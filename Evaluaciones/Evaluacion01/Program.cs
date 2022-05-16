@@ -69,10 +69,10 @@ namespace Evaluacion01
             /* Mostrar el valor que debe pagar cada uno de los containers creados por conceptos de gastos de envío. */
             Console.WriteLine("VALOR DE GASTOS DE ENVIO PARA CADA CONTAINER");
             Console.WriteLine("------------------------------------");
-            Console.WriteLine("Buque " + primero.Codigo + ": " + primero.CalcularGastosEnvio());
-            Console.WriteLine("Buque " + segundo.Codigo + ": " + segundo.CalcularGastosEnvio());
-            Console.WriteLine("Buque " + tercero.Codigo + ": " + tercero.CalcularGastosEnvio());
-            Console.WriteLine("Buque " + cuarto.Codigo + ": " + cuarto.CalcularGastosEnvio());
+            Console.WriteLine("Buque " + primero.Codigo + ": " + primero.CalcularGastosEnvio() + " CLP");
+            Console.WriteLine("Buque " + segundo.Codigo + ": " + segundo.CalcularGastosEnvio() + " CLP");
+            Console.WriteLine("Buque " + tercero.Codigo + ": " + tercero.CalcularGastosEnvio() + " CLP");
+            Console.WriteLine("Buque " + cuarto.Codigo + ": " + cuarto.CalcularGastosEnvio() + " CLP");
             Console.WriteLine("------------------------------------");
             Console.WriteLine();
 
