@@ -21,7 +21,16 @@ namespace Evaluacion01
         public int CapacidadMaxima { get => capacidadMaxima; set => capacidadMaxima = value; }
         public byte Tamaño { get => tamaño; set => tamaño = value; }
         public bool EsRefrigerado { get => esRefrigerado; set => esRefrigerado = value; }
-        public int PesoActual { get => pesoActual; set => pesoActual = value; }
+        public int PesoActual
+        {
+            get => pesoActual;
+            set
+            {
+                if (value < 0) pesoActual = 0;
+                else if (value > capacidadMaxima) pesoActual = capacidadMaxima;
+                else pesoActual = value;
+            }
+        }
 
         public Container() { }
 
