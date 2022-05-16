@@ -51,9 +51,9 @@ namespace Evaluacion01
         /// <summary>
         /// Remueve aproximadamente un 10% del peso cargado en el container.
         /// </summary>
-        public void SacarPeso()
+        public void SacarPeso(int peso)
         {
-            pesoActual -= ((10 * pesoActual) / 100);
+            pesoActual -= peso;
             if (pesoActual < 0) pesoActual = 0;
         }
 
