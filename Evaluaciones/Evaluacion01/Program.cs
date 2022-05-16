@@ -83,7 +83,7 @@ namespace Evaluacion01
 
             /* Quitar 200 kilos de peso desde el primero de los containers y mostrar el peso actual. */
             primero.SacarPeso(200);
-            Console.WriteLine("Peso de container primero: " + primero.PesoActual);
+            Console.WriteLine("Peso de container primero: " + primero.PesoActual + " kg");
 
             // Congelar consola
             Console.ReadKey();
