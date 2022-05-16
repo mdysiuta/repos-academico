@@ -33,7 +33,7 @@ namespace Evaluacion01
 
         public Buque() { }
 
-        public Buque(string codigo, string nombre = "Sin especificar", string pais = "Sin especificar", int cantidadContainers = 20, int cantidadContaintersCargados = 0, int gastoTranspoter = 0)
+        public Buque(string codigo, int cantidadContainers = 20, int cantidadContainersCargados = 0, int gastoTransporte = 0, string nombre = "Sin especificar", string pais = "Sin especificar")
         {
             if (codigo.Length < 5)
             {
@@ -44,6 +44,11 @@ namespace Evaluacion01
                 }
             }
             this.codigo = codigo;
+            this.cantidadContainers = cantidadContainers;
+            this.cantidadContainersCargados = cantidadContainersCargados;
+            this.gastoTransporte = gastoTransporte;
+            this.nombre = nombre;
+            this.pais = pais;
         }
 
         /// <summary>
