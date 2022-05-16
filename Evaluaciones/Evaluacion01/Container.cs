@@ -34,16 +34,16 @@ namespace Evaluacion01
 
         public Container() { }
 
-        public Container(string codigo, int capacidadMaxima = 0, int pesoActual = 0, byte tamaño = 20, Buque buque = null, string marca = "Sin especificar", bool esRefrigerado = false)
+        public Container(string codigo, Buque buque = null, int capacidadMaxima = 100000, int pesoActual = 0, byte tamaño = 20, string marca = "Sin especificar", bool esRefrigerado = false)
         {
             this.codigo = codigo;
+            this.buque = buque;
             this.capacidadMaxima = capacidadMaxima;
             this.pesoActual = pesoActual;
 
             // Si la condición no se cumple, el container será creado con el valor 20 por defecto
             if (tamaño >= 30) tamaño = 40;
 
-            this.buque = buque;
             this.marca = marca;
             this.esRefrigerado = esRefrigerado;
         }
