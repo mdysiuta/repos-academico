@@ -36,14 +36,6 @@ namespace Evaluacion01
 
         public Container(string codigo, int capacidadMaxima = 0, int pesoActual = 0, byte tamaño = 20, Buque buque = null, string marca = "Sin especificar", bool esRefrigerado = false)
         {
-            if (codigo.Length < 5)
-            {
-                for (int i = 0; i < (5 - codigo.Length); i++)
-                {
-                    // Se concatena el codigo hasta que contenga 5 carácteres
-                    codigo = string.Concat("0", codigo);
-                }
-            }
             this.codigo = codigo;
             this.capacidadMaxima = capacidadMaxima;
             this.pesoActual = pesoActual;
