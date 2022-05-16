@@ -31,6 +31,8 @@ namespace Evaluacion01
         }
         public int GastoTransporte { get => gastoTransporte; set => gastoTransporte = value; }
 
+        public List<Container> ListaContainers { get => listaContainers; }
+
         public Buque() { }
 
         public Buque(string codigo, int cantidadContainers = 20, int cantidadContainersCargados = 0, int gastoTransporte = 0, string nombre = "Sin especificar", string pais = "Sin especificar")
