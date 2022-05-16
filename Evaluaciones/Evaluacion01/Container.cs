@@ -34,7 +34,7 @@ namespace Evaluacion01
 
         public Container() { }
 
-        public Container(string codigo, Buque buque = null, int capacidadMaxima = 100000, int pesoActual = 0, byte tamaño = 20, string marca = "Sin especificar", bool esRefrigerado = false)
+        public Container(string codigo, Buque buque = null, int pesoActual = 0, int capacidadMaxima = 100000, byte tamaño = 20, string marca = "Sin especificar", bool esRefrigerado = false)
         {
             this.codigo = codigo;
             this.buque = buque;
