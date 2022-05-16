@@ -25,7 +25,14 @@ namespace Evaluacion01
 
         public Container() { }
 
-        public void SacarPeso() { }
+        /// <summary>
+        /// Remueve aproximadamente un 10% del peso cargado en el container.
+        /// </summary>
+        public void SacarPeso()
+        {
+            pesoActual -= ((10 * pesoActual) / 100);
+            if (pesoActual < 0) pesoActual = 0;
+        }
 
         /// <summary>
         /// Calcula el valor a pagar por una inspección de container.
@@ -36,9 +43,21 @@ namespace Evaluacion01
             return (pesoActual * 5);
         }
 
+        /// <summary>
+        /// Calcula el gasto de envio que el container añadirá al buque.
+        /// </summary>
+        /// <returns>Valor del gasto.</returns>
         public int CalcularGastosEnvio()
         {
-            return 0;
+            int gastoEnvio = buque.GastoTransporte / buque.CantidadContainers;
+
+            if (tamaño == 40)
+            {
+                gastoEnvio += gastoEnvio + 9000;
+            }
+            else gastoEnvio += 3500;
+
+            return gastoEnvio;
         }
 
         /// <summary>
