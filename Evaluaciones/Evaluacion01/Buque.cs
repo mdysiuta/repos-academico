@@ -16,18 +16,56 @@ namespace Evaluacion01
         private int gastoTransporte;
         private List<Container> listaContainers;
 
-        public string Codigo { get => codigo; set => codigo = value; }
+        public string Codigo { get => codigo; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Pais { get => pais; set => pais = value; }
         public int CantidadContainers { get => cantidadContainers; set => cantidadContainers = value; }
-        public int CantidadContainersCargados { get => cantidadContainersCargados; set => cantidadContainersCargados = value; }
+        public int CantidadContainersCargados
+        {
+            get => cantidadContainersCargados;
+            set
+            {
+                if (value > cantidadContainers) cantidadContainersCargados = cantidadContainers;
+                else cantidadContainersCargados = value;
+            }
+        }
         public int GastoTransporte { get => gastoTransporte; set => gastoTransporte = value; }
 
         public Buque() { }
 
+        public Buque(string codigo, string nombre = "Sin especificar", string pais = "Sin especificar", int cantidadContainers = 20, int cantidadContaintersCargados = 0, int gastoTranspoter = 0)
+        {
+            if (codigo.Length < 5)
+            {
+                for (int i = 0; i < (5 - codigo.Length); i++)
+                {
+                    // Se concatena el codigo hasta que contenga 5 carácteres
+                    codigo = string.Concat("0", codigo);
+                }
+            }
+            this.codigo = codigo;
+        }
+
+        /// <summary>
+        /// Sube container que se haya asociado a un buque.
+        /// </summary>
+        /// <param name="container"></param>
+        /// <returns>True si el container puede ser cargado, false si no.</returns>
         public bool SubirContainer(Container container)
         {
-            return false;
+            if (container.Tamaño == 40)
+            {
+                if (cantidadContainersCargados == 39) return false;
+            }
+            else if (container.Tamaño == 20)
+            {
+                if (cantidadContainersCargados == 40) return false;
+            }
+
+            listaContainers.Add(container);
+            if (container.Tamaño == 40) listaContainers.Add(container);
+
+            return true;
         }
     }
 }
