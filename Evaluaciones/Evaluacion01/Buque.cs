@@ -80,5 +80,10 @@ namespace Evaluacion01
 
             return true;
         }
+        
+        public override string ToString()
+        {
+            return codigo + " " + nombre;
+        }
     }
 }
