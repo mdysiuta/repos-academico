@@ -11,8 +11,8 @@ namespace Evaluacion01
         static void Main(string[] args)
         {
             /* Crear 2 buques */
-            Buque alfa = new Buque("35899", 2050000);
-            Buque beta = new Buque("35877", 2170000);
+            Buque alfa = new Buque("35899", 2050000, 20, 0, "RMS Lusitania", "Inglaterra");
+            Buque beta = new Buque("35877", 2170000, 20, 0, "HMCS Winnipeg", "Canada");
 
             /* Crear 4 containers y asociarlos a un buque. El cuarto container que cree, lo debe crear con el peso máximo
             que puede cargar ya ocupado. */
