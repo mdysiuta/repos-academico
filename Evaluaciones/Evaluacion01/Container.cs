@@ -93,5 +93,10 @@ namespace Evaluacion01
             if ((peso + pesoActual) > capacidadMaxima) return false;
             else return true;
         }
+        
+        public override string ToString()
+        {
+            return codigo + " " + marca;
+        }
     }
 }
